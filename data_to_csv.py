@@ -3,6 +3,8 @@ import os
 
 import utilities
 
+dir_name = 'resources/'
+
 file_name_clients_data = "clients_data.csv"
 file_path_clients_data = "resources/" + file_name_clients_data
 
@@ -18,6 +20,8 @@ def add_header(file_name):
 
 
 def create_csv_file(file_path, file_name):
+    if not os.path.exists(dir_name):
+        os.mkdir(dir_name)
     if not os.path.isfile(file_path):
         with open(file_path, "w", newline="") as stream:
             writer = csv.writer(stream)

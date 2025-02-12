@@ -20,11 +20,13 @@ bot = Bot(token=token)
 # Диспетчер
 dp = Dispatcher(storage=MemoryStorage())
 
+dir_name = 'resources/'
+
 file_name_clients_data = "clients_data.csv"
-file_path_clients_data = "resources/" + file_name_clients_data
+file_path_clients_data = dir_name + file_name_clients_data
 
 file_name_unavailable_time = "unavailable_time.csv"
-file_path_unavailable_time = "resources/" + file_name_unavailable_time
+file_path_unavailable_time = dir_name + file_name_unavailable_time
 
 data_to_csv.create_csv_file(file_path_clients_data, file_name_clients_data)
 data_to_csv.create_csv_file(file_path_unavailable_time, file_name_unavailable_time)

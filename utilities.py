@@ -3,7 +3,6 @@ from contextlib import suppress
 from aiogram.exceptions import TelegramBadRequest
 from aiogram.fsm.context import FSMContext
 import csv
-from datetime import timedelta, datetime
 import datetime as DT
 import locale
 
